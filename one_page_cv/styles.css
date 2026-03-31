@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 8.5in;
+    height: 11in;
+    margin: 20px auto;
+    padding: 0.5in;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 8px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+}
+
+.contact-info {
+    font-size: 10px;
+    color: #555;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #222;
+    color: white;
+    padding: 4px 6px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+/* Experience & Education */
+.job, .education-item {
+    margin-bottom: 8px;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.job h3, .education-item h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.date {
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.company {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 3px;
+    font-style: italic;
+}
+
+.job-details {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.job-details li {
+    font-size: 14px;
+    margin-bottom: 2px;
+    position: relative;
+    padding-left: 8px;
+}
+
+.job-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.skill-category {
+    font-size: 14px;
+    padding: 4px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #222;
+    padding-left: 6px;
+}
+
+.skill-category strong {
+    color: #1a1a1a;
+}
+
+/* Certifications */
+.certifications {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.certifications li {
+    font-size: 14px;
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 8px;
+}
+
+.certifications li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .container {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        height: auto;
+    }
+}
