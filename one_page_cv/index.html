@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mithu Sarkar - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
+
     <div class="container">
         <!-- Header -->
         <header class="header">
             <h1>MITHU SARKAR</h1>
             <div class="contact-info">
-                <span>01775668873</span> |
-                <span>mithuswe21sust@gmail.com</span> |
-                <span>Sylhet, Bangladesh</span>
+                <span>(555) 123-4567</span> |
+                <span>mithu.sarkar@email.com</span> |
+                <span>linkedin.com/in/johndoe</span> |
+                <span>New York, NY</span>
             </div>
         </header>
 
         <!-- Professional Summary -->
         <section class="section">
             <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
-            <p>Passionate Software Engineering student at Shahjalal University of Science and Technology with strong foundation in web technologies. Dedicated to building beautiful, responsive, and user-friendly websites using modern development practices.</p>
+            <p>Results-driven professional with 5+ years of experience in web development and project management. Proven
+                track record of delivering high-quality solutions and leading cross-functional teams to achieve business
+                objectives.</p>
         </section>
 
         <!-- Projects -->
@@ -32,25 +38,40 @@
 
             <div class="job">
                 <div class="job-header">
-                    <h3>Professional Portfolio Website</h3>
+                    <h3>E-Commerce Web Application</h3>
+                    <span class="date">2023</span>
                 </div>
-                <p class="company">Technologies: HTML5, CSS3, JavaScript, Font Awesome</p>
+                <p class="company">Technologies: React, Node.js, MongoDB</p>
                 <ul class="job-details">
-                    <li>Created a responsive portfolio website showcasing skills and projects</li>
-                    <li>Implemented smooth animations, hover effects, and interactive navigation</li>
-                    <li>Designed mobile-first approach for optimal viewing experience</li>
+                    <li>Built a full-stack e-commerce platform with user authentication and payment integration</li>
+                    <li>Implemented responsive design for mobile and desktop users</li>
+                    <li>Optimized database queries reducing load time by 35%</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
-                    <h3>Task Management Application</h3>
+                    <h3>Portfolio Website</h3>
+                    <span class="date">2022</span>
                 </div>
-                <p class="company">Technologies: Vue.js, JavaScript, CSS3</p>
+                <p class="company">Technologies: HTML5, CSS3, JavaScript</p>
                 <ul class="job-details">
-                    <li>Developed a dynamic task management app with create, edit, and delete functionality</li>
-                    <li>Implemented local storage for data persistence</li>
-                    <li>Created responsive UI with modern styling and animations</li>
+                    <li>Designed and developed a responsive portfolio showcasing multiple projects</li>
+                    <li>Implemented smooth scrolling and animations for enhanced UX</li>
+                    <li>Achieved 95% Google Lighthouse performance score</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <h3>Portfolio Website</h3>
+                    <span class="date">2022</span>
+                </div>
+                <p class="company">Technologies: HTML5, CSS3, JavaScript</p>
+                <ul class="job-details">
+                    <li>Designed and developed a responsive portfolio showcasing multiple projects</li>
+                    <li>Implemented smooth scrolling and animations for enhanced UX</li>
+                    <li>Achieved 95% Google Lighthouse performance score</li>
                 </ul>
             </div>
         </section>
@@ -60,9 +81,17 @@
             <h2 class="section-title">EDUCATION</h2>
             <div class="education-item">
                 <div class="edu-header">
-                    <h3>Bachelor of Science in Software Engineering</h3>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span class="date">2018</span>
                 </div>
-                <p class="company">Shahjalal University of Science and Technology, Sylhet, Bangladesh</p>
+                <p class="company">University of New York, New York, NY</p>
+            </div>
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span class="date">2018</span>
+                </div>
+                <p class="company">University of New York, New York, NY</p>
             </div>
         </section>
 
@@ -71,30 +100,47 @@
             <h2 class="section-title">SKILLS</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <strong>Frontend:</strong> HTML5, CSS3, JavaScript
+                    <strong>Languages:</strong> HTML5, CSS3, JavaScript, Python
                 </div>
                 <div class="skill-category">
-                    <strong>Frameworks & Libraries:</strong> Vue.js, React, Express.js
+                    <strong>Frameworks:</strong> React, Vue.js, Node.js
                 </div>
                 <div class="skill-category">
-                    <strong>Tools & Technologies:</strong> Git, VS Code, REST APIs, Responsive Design
+                    <strong>Tools:</strong> Git, VS Code, Webpack, REST APIs
                 </div>
                 <div class="skill-category">
-                    <strong>Office & Others:</strong> MS Word, MS Excel, MS PowerPoint, Web Design, UI Design
+                    <strong>Other:</strong> Responsive Design, UX/UI, Agile Methodology
                 </div>
             </div>
         </section>
 
-        <!-- Additional Info -->
+        <!-- Certifications -->
         <section class="section">
-            <h2 class="section-title">ADDITIONAL INFO</h2>
+            <h2 class="section-title">CERTIFICATIONS</h2>
             <ul class="certifications">
-                <li><strong>Languages:</strong> Bangla (Native), English (Fluent)</li>
-                <li>Passionate about building beautiful and responsive web experiences</li>
-                <li>Continuous learner with focus on modern web technologies</li>
+                <li>Professional Web Developer Certificate - Coursera, 2020</li>
+                <li>Advanced JavaScript Specialization - Udemy, 2019</li>
             </ul>
         </section>
     </div>
+
+    <script>
+        // Auto-download CV as PDF when page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const element = document.querySelector('.container');
+                const opt = {
+                    margin: 5,
+                    filename: 'Mithu_Sarkar_Resume.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+                };
+                
+                html2pdf().set(opt).from(element).save();
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>
